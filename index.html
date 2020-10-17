@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300;600&display=swap" rel="stylesheet">
+    <title>Unidad 8 JS</title>
+</head>
+
+<body>
+    <style>
+        html {
+            box-sizing: border-box;
+            font-size: 62.5%;
+            font-family: 'Sansita Swashed', cursive;
+        }
+        
+        body {
+            height: 100vh;
+            background: rgb(2, 0, 36);
+            background: linear-gradient(180deg, rgba(2, 0, 36, 0.7567401960784313) 0%, rgba(25, 42, 86, 1) 52%, rgba(39, 60, 117, 1) 100%);
+        }
+        
+        *,
+        *:before,
+        *:after {
+            box-sizing: inherit;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            font-weight: 600;
+            color: white;
+        }
+        
+        p {
+            font-size: 2rem;
+            color: #fc5c65;
+        }
+        
+        label {
+            font-size: 2.5rem;
+        }
+        
+        input {
+            font-family: 'Sansita Swashed', cursive;
+            font-size: 2rem;
+            border: .1rem ridge#273c75;
+            margin-top: .5rem;
+            background-color: #dcdde1;
+        }
+        
+        .contenedor {
+            width: 90%;
+            max-width: 120rem;
+            height: 100%;
+            margin: 0 auto;
+            padding-top: 30vh;
+        }
+        
+        .formulario {
+            display: flex;
+            justify-content: center;
+            flex-basis: 50%;
+        }
+        
+        form {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            padding: 3rem;
+            background: #d1d8e0;
+            border-radius: 3%;
+        }
+        
+        input .usuario {
+            grid-row: 2 / 3;
+        }
+        
+        .btn {
+            font-family: 'Sansita Swashed', cursive;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            background-color: #273c75;
+            grid-column: 2 / 3;
+            margin-top: 2rem;
+            padding: .5rem;
+            width: 50%;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:focus {
+            background-color: blueviolet;
+            box-shadow: none;
+        }
+    </style>
+
+    <div class="contenedor">
+
+        <h1>Ingreso al Sistema</h1>
+
+        <div class="formulario">
+            <form action="" method="POST" id="form">
+                <label for="user">Usuario:</label>
+                <input type="mail" id="user" placeholder="usu@rio.com" class="usuario">
+                <label for="pass">Clave:</label>
+                <input type="password" id="pass" placeholder="contraseña" class="contraseña">
+                <button type="submit" class="btn" id="boton">Ingresar</button>
+            </form>
+        </div>
+        <div class="formulario">
+            <p id="error"></p>
+        </div>
+    </div>
+
+    <script src="js/control.js"></script>
+</body>
+
+</html>
